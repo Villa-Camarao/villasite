@@ -1,8 +1,22 @@
-# START YOAST BLOCK
-# ---------------------------
-User-agent: *
-Disallow:
+# robots.txt para https://villacamarao.com.br
 
-Sitemap: https://villacamarao.com.br/sitemap_index.xml
-# ---------------------------
-# END YOAST BLOCK
+# Permitir acesso a todos os robôs
+User-agent: *
+
+# Bloquear arquivos e diretórios técnicos do antigo WordPress (por segurança)
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /xmlrpc.php
+Disallow: /readme.html
+Disallow: /license.txt
+
+# Bloquear parâmetros que não são úteis para SEO (caso usados)
+Disallow: /*?s=
+Disallow: /*?*
+
+# Permitir o restante do site normalmente
+Allow: /
+
+# Informar onde está o sitemap
+Sitemap: https://villacamarao.com.br/sitemap_villacamarao.xml
