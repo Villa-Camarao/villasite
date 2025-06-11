@@ -19,4 +19,4 @@ Disallow: /*?*
 Allow: /
 
 # Informar onde está o sitemap
-Sitemap: https://villacamarao.com.br/sitemap_villacamarao.xml
+Sitemap: https://villacamarao.com.br/sitemap.xml
