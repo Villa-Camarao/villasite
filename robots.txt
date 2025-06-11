@@ -17,6 +17,8 @@ Disallow: /*?*
 
 # Permitir o restante do site normalmente
 Allow: /
+Allow: /wp-content/uploads/
+Allow: /villacamarao.com.br/tags/
 
 # Informar onde está o sitemap
 Sitemap: https://villacamarao.com.br/sitemap.xml
