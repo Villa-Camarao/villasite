@@ -20,6 +20,7 @@ Allow: /
 Allow: /wp-content/uploads/
 Allow: /villacamarao.com.br/tags/
 Allow: /villacamarao.com.br/produtos/
+Allow: /villacamarao.com.br/revista/
 
 # Informar onde está o sitemap
 Sitemap: https://villacamarao.com.br/sitemap.xml
