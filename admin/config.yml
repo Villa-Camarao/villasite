@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: Villa-Camarao/villasite         # EX.: villacamarao/site
+  branch: main             # ou 'master', se for o seu padrão
+  # A autenticação OAuth será configurada no PASSO 2
+  # base_url e auth_endpoint entram depois
+
+site_url: https://villacamarao.com.br   # URL pública do site
+
+media_folder: "assets/uploads"     # onde os arquivos sobem no repositório
+public_folder: "/assets/uploads"   # como serão referenciados no site
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
+    folder: "blog"           # pasta onde os .md ficarão no repositório
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{slug}}/index"   # facilita criar pastas por post (útil p/ imagens do post)
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Imagem de capa", name: "cover", widget: "image", required: false }
+      - { label: "Resumo (SEO)", name: "description", widget: "text", required: false }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
